@@ -9,6 +9,7 @@
 
 $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
 
+
 var roundedTime = moment().startOf("hour");
 var nineAm = moment().startOf('day').add(9, "hours");
 var tenAm = nineAm.add(1, "h");
@@ -19,7 +20,26 @@ var twoPm = onePm.add(1, "hour");
 var threePm = twoPm.add(1, "hour");
 var fourPm = threePm.add(1, "hour");
 var fivePm = fourPm.add(1, "hour");
+var timeBlocks = [9, 10, 11, 12, 1, 2, 3, 4, 5];
 
+for (var i = 0; i < timeBlocks.length; i++) {
+    var myValue = localStorage.getItem(timeBlocks[i]);
+
+    $(".time" + timeBlocks[i]).val(myValue);
+}
+
+$(".saveBtn").on("click", function(event) {
+    event.preventDefault();
+    var keyValue  = $(this).siblings(".form-control").val();
+    var key = $(this).parent().data("time");
+
+    localStorage.setItem(key, keyValue);
+
+ 
+    console.log(keyValue);
+    console.log(key);
+    console.log(localStorage);
+});
 
 
 function myTime() {
@@ -117,6 +137,9 @@ function myTime() {
 };
 
 myTime();
+
+
+
 
 
 
