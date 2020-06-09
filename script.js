@@ -8,3 +8,29 @@
 //event listner for save button
 
 $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
+
+var roundedTime = moment().startOf("hour");
+var nineAm = moment().startOf('day').add(9, "hours");
+
+
+
+
+function myTime() {
+    if (roundedTime.isSame(nineAm)) {
+        $(".time9").addClass("present");
+    } else 
+    if (roundedTime.isBefore(nineAm)) {
+        $(".time9").addClass("future");
+    } else
+    if (roundedTime.isAfter(nineAm)) {
+        $(".time9").addClass("past");
+    }
+
+};
+
+myTime();
+
+
+
+
+
