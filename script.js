@@ -6,25 +6,29 @@
     //might be able to write code to handle each hour in one code???
 //choose which method to use to get items from local storage. getItem() appears the easiest.
 //event listner for save button
-
+//This returns the formatted date and time to the header.
 $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
 
-
+//Several variables to correctly set each timeblock.
 var roundedTime = moment().startOf("hour");
 var nineAm = moment().startOf('day').add(9, "hours");
-var tenAm = nineAm.add(1, "h");
-var elevenAm = tenAm.add(1, "hour");
-var twelvePm = elevenAm.add(1, "hour");
-var onePm = twelvePm.add(1, "hour");
-var twoPm = onePm.add(1, "hour");
-var threePm = twoPm.add(1, "hour");
-var fourPm = threePm.add(1, "hour");
-var fivePm = fourPm.add(1, "hour");
+var tenAm = moment().startOf('day').add(10, "hours");
+var elevenAm = moment().startOf('day').add(11, "hours");
+var twelvePm = moment().startOf('day').add(12, "hours");
+var onePm = moment().startOf('day').add(13, "hours");
+var twoPm = moment().startOf('day').add(14, "hours");
+var threePm = moment().startOf('day').add(15, "hours");
+var fourPm = moment().startOf('day').add(16, "hours");
+var fivePm = moment().startOf('day').add(17, "hours");
+
+//An array of data-times.
 var timeBlocks = [9, 10, 11, 12, 1, 2, 3, 4, 5];
 
+//A loop to cycle through all data-times.
 for (var i = 0; i < timeBlocks.length; i++) {
     var myValue = localStorage.getItem(timeBlocks[i]);
 
+//
     $(".time" + timeBlocks[i]).val(myValue);
 }
 
@@ -35,10 +39,6 @@ $(".saveBtn").on("click", function(event) {
 
     localStorage.setItem(key, keyValue);
 
- 
-    console.log(keyValue);
-    console.log(key);
-    console.log(localStorage);
 });
 
 
@@ -137,8 +137,6 @@ function myTime() {
 };
 
 myTime();
-
-
 
 
 
