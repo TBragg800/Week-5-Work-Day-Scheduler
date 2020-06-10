@@ -23,16 +23,20 @@
   </head>
 
   <body>
+    <!-- Header element containing a nested h1 tag and a p tag. -->
+    <!-- The p tag is used to append the date and time from the moment.js library. -->
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
+
+    <!-- A container element to hold all time blocks -->
     <div class="container">
-      <!-- Timeblocks go here -->
-      <!-- needs div for each hour-->
-      <!-- each hour div needs a class to ref all hour divs and an id or class to ref individually -->
-      <!-- each hour div needs a button with "saveBtn" class and maybe a class to access all buttons "btn"-->
+      
+      <!-- A series of timeblocks styled using both bootstrap and a personalized style -->
+      <!-- sheet. Each timeblock contains an input group div, a nested span tag for displaying -->
+      <!-- the time for each block, a text input area and a button to save the text to the page. -->
       <div class="input-group input-group-lg" data-time="9">
         <div class="input-group-prepend">
           <span class="input-group-text time-block" id="inputGroup-sizing-default">09 AM</span>

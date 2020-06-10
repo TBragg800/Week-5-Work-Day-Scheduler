@@ -1,11 +1,4 @@
 
-//use moment.js to incorporate and format date and time
-//current day and time must be appear in the jumbotron
-//hour must start at 9.
-//statements to handle if hour is past, present or future.
-    //might be able to write code to handle each hour in one code???
-//choose which method to use to get items from local storage. getItem() appears the easiest.
-//event listner for save button
 //This returns the formatted date and time to the header.
 $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
 
@@ -28,10 +21,11 @@ var timeBlocks = [9, 10, 11, 12, 1, 2, 3, 4, 5];
 for (var i = 0; i < timeBlocks.length; i++) {
     var myValue = localStorage.getItem(timeBlocks[i]);
 
-//
+
     $(".time" + timeBlocks[i]).val(myValue);
 }
 
+//Event listner set used to save to local storage using the setItem method.
 $(".saveBtn").on("click", function(event) {
     event.preventDefault();
     var keyValue  = $(this).siblings(".form-control").val();
@@ -41,7 +35,8 @@ $(".saveBtn").on("click", function(event) {
 
 });
 
-
+//This is a series of if else statements inside of a function which handels 
+//adding the appropriate class to style each timeblock.
 function myTime() {
     if (roundedTime.isSame(nineAm)) {
         $(".time9").addClass("present");
