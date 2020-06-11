@@ -46,7 +46,7 @@ function myTime() {
     } else
     if (roundedTime.isAfter(nineAm)) {
         $(".time9").addClass("past");
-    };
+    }
 
     if (roundedTime.isSame(tenAm)) {
         $(".time10").addClass("present");
@@ -56,7 +56,7 @@ function myTime() {
     } else
     if (roundedTime.isAfter(tenAm)) {
         $(".time10").addClass("past");
-    };
+    }
 
     if (roundedTime.isSame(elevenAm)) {
         $(".time11").addClass("present");
@@ -66,7 +66,7 @@ function myTime() {
     } else
     if (roundedTime.isAfter(elevenAm)) {
         $(".time11").addClass("past");
-    };
+    }
 
     if (roundedTime.isSame(twelvePm)) {
         $(".time12").addClass("present");
@@ -76,7 +76,7 @@ function myTime() {
     } else
     if (roundedTime.isAfter(twelvePm)) {
         $(".time12").addClass("past");
-    };
+    }
 
     if (roundedTime.isSame(onePm)) {
         $(".time1").addClass("present");
@@ -86,7 +86,7 @@ function myTime() {
     } else
     if (roundedTime.isAfter(onePm)) {
         $(".time1").addClass("past");
-    };
+    }
 
     if (roundedTime.isSame(twoPm)) {
         $(".time2").addClass("present");
@@ -96,7 +96,7 @@ function myTime() {
     } else
     if (roundedTime.isAfter(twoPm)) {
         $(".time2").addClass("past");
-    };
+    }
 
     if (roundedTime.isSame(threePm)) {
         $(".time3").addClass("present");
@@ -106,7 +106,7 @@ function myTime() {
     } else
     if (roundedTime.isAfter(threePm)) {
         $(".time3").addClass("past");
-    };
+    }
 
     if (roundedTime.isSame(fourPm)) {
         $(".time4").addClass("present");
@@ -116,7 +116,7 @@ function myTime() {
     } else
     if (roundedTime.isAfter(fourPm)) {
         $(".time4").addClass("past");
-    };
+    }
 
     if (roundedTime.isSame(fivePm)) {
         $(".time5").addClass("present");
@@ -126,10 +126,10 @@ function myTime() {
     } else
     if (roundedTime.isAfter(fivePm)) {
         $(".time5").addClass("past");
-    };
+    }
     
 
-};
+}
 
 myTime();
 

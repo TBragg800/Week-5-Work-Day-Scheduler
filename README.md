@@ -2,10 +2,11 @@
 
 ## Thomas Bragg Homework-5 Work Day Scheduler
 
-* ['Github Repository']()
-* ['Github Deployed Site']()
+* ['Github Repository'](https://github.com/TBragg800/Week-5-Work-Day-Scheduler)
+* ['Github Deployed Site'](https://tbragg800.github.io/Week-5-Work-Day-Scheduler/)
 
 ### Summary:
+This project offers a calender applcation that allows the user to save hour by hour events in a 9am to 5pm structured work day using a responsive bootstrap layout and dynamically powered HTML and CSS by JQuery. The design incorporates the Moment.js library leveraging local storage to persist user dictated events in each timeblock. The events are color coded based on the current time to further enhance user experience. 
 
 
 ### Psuedo Code:
@@ -23,10 +24,15 @@
       
 
 ### Features:
-
+* A header section containing the current date and time.
+* Established timeblocks representing a 9am to 5pm work schedule.
+* Each timeblock change has a real time representation of past, present or future hour indicated by color.
+* For each timeblock, text will persist for user dictated events.
 
 
 ### Code Validator
-
+* Code validation by W3C for HTML and CSS
+* Code validation by BeautifyTools for Javascript
 
 #### Screenshot of deployed application
+![](images/Work-Day-Scheduler.png)
